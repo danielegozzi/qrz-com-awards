@@ -9372,4 +9372,14 @@ for (let cn of country_names.entries()) {
         output_regexes.push(dxcc.dxcc[min_distance_idx].prefixRegex);
     }
 }
-prompt("Please copy the regexes for your missing countries. You can use them in a\n    tail -f ALL.TXT | grep --color -P -f [filename]\ncommand.", assemble_regexes_for_wsjtx_log(output_regexes));
+html = "<h1>Missing countries regular expressions for the WSJT-X log</h1><p>Please copy the regular expression for your missing countries to a text file. <strong>WARNING:</strong> the regex starts with a space.</p><p>You can use that in a <tt style=\"background-color: #e5e7e9\">tail -f ALL.TXT | grep --color -P -f [filename]</tt> command.</p><div style=\"background-color: #e5e7e9; width:800px;overflow:auto\"><pre>";
+html += assemble_regexes_for_wsjtx_log(output_regexes);
+html += "\n</pre></div>";
+winUrl = URL.createObjectURL(
+    new Blob([html], { type: "text/html" })
+);
+win = window.open(
+    winUrl,
+    "win",
+    `width=800,height=400,screenX=200,screenY=200`
+);
