@@ -1,5 +1,5 @@
 // you can use this by entering in the web developer console:
-// var script = document.createElement('script'); script.type = 'text/javascript'; script.src = 'https://raw.githubusercontent.com/danielegozzi/qrz-com-awards/main/100-countries.js'; document.head.appendChild(script);
+// var script = document.createElement('script'); script.type = 'text/javascript'; script.src = 'https://danielegozzi.github.io/qrz-com-awards/100-countries.js'; document.head.appendChild(script);
 
 // from https://github.com/k0swe/dxcc-json/blob/main/dxcc.json
 dxcc = {
