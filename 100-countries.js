@@ -6015,8 +6015,8 @@ dxcc = {
         "name": "Northern Ireland",
         "notes": "",
         "outgoingQslService": true,
-        "prefix": "GI,GN",
-        "prefixRegex": "^G[IN][A-Z0-9\\/]*$",
+        "prefix": "GI,GN,MI",
+        "prefixRegex": "^(G[IN]|MI)[A-Z0-9\\/]*$",
         "thirdPartyTraffic": false,
         "validEnd": "",
         "validStart": ""
@@ -9348,6 +9348,7 @@ function assemble_regexes_for_wsjtx_log(regexes) {
 }
 
 output_regexes = [];
+curr_date = new Date();
 for (let cn of country_names.entries()) {
     i = cn[0];
     country_name = cn[1].innerHTML;
@@ -9357,6 +9358,12 @@ for (let cn of country_names.entries()) {
         min_dixtance_idx = -1;
         for (let c of dxcc.dxcc.entries()) {
             idx = c[0];
+            if ("validEnd" in c[1] && c[1].validEnd != "") {
+              validEnd = new Date(c[1].validEnd);
+              if (curr_date > validEnd) {
+                continue;
+              }
+            }
             dxcc_name = c[1].name;
             hd1 = hammingDist(dxcc_name, country_name);
             hd2 = hammingDist(country_name, dxcc_name);
