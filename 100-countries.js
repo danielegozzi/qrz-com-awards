@@ -9367,7 +9367,7 @@ for (let cn of country_names.entries()) {
             dxcc_name = c[1].name;
             hd1 = hammingDist(dxcc_name, country_name);
             hd2 = hammingDist(country_name, dxcc_name);
-            hd = Math.max(hd1, hd2);
+            hd = Math.min(hd1, hd2);
             if (hd < min_distance) {
                 min_distance_idx = idx;
                 min_distance = hd;
