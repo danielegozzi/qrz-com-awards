@@ -5323,7 +5323,7 @@ dxcc = {
       "notes": "",
       "outgoingQslService": true,
       "prefix": "VP8,LU",
-      "prefixRegex": "^(VP8|LU)[A-Z0-9\\/]*$",
+      "prefixRegex": "^(VP8)[A-Z0-9\\/]*$",
       "thirdPartyTraffic": false,
       "validEnd": "",
       "validStart": ""
@@ -5393,7 +5393,7 @@ dxcc = {
       "notes": "",
       "outgoingQslService": true,
       "prefix": "VP8,LU",
-      "prefixRegex": "^(VP8|LU)[A-Z0-9\\/]*$",
+      "prefixRegex": "^(VP8)[A-Z0-9\\/]*$",
       "thirdPartyTraffic": false,
       "validEnd": "",
       "validStart": ""
@@ -5439,7 +5439,7 @@ dxcc = {
       "notes": "",
       "outgoingQslService": true,
       "prefix": "VP8,LU",
-      "prefixRegex": "^(VP8|LU)[A-Z0-9\\/]*$",
+      "prefixRegex": "^(VP8)[A-Z0-9\\/]*$",
       "thirdPartyTraffic": false,
       "validEnd": "",
       "validStart": ""
@@ -5462,7 +5462,7 @@ dxcc = {
       "notes": "",
       "outgoingQslService": true,
       "prefix": "VP8,LU,CE9,HF0,4K1",
-      "prefixRegex": "^(VP8|LU|CE9|HF0|4K1)[A-Z0-9\\/]*$",
+      "prefixRegex": "^(VP8|CE9|HF0|4K1)[A-Z0-9\\/]*$",
       "thirdPartyTraffic": false,
       "validEnd": "",
       "validStart": ""
