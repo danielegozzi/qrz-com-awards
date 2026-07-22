@@ -1604,7 +1604,7 @@ dxcc = {
       notes: "",
       outgoingQslService: true,
       prefix: "FT/J,E,TO",
-      prefixRegex: "^(FT\\/J|E|TO)[A-Z0-9\\/]*$",
+      prefixRegex: "^(FT|FR)[0-9][A-Z0-9\\/]*\\/J$",
       thirdPartyTraffic: false,
       validEnd: "",
       validStart: "1960-06-25",
